@@ -6,15 +6,18 @@ import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const myHeaders = new Headers(); // Currently empty
+  myHeaders.set("X-Frame-Options", "SAMEORIGIN");
+  myHeaders.set("Content-Security-Policy", "frame-ancestors 'none';");
   return (
     <>
     <Head>
-    <meta
+    {/* <meta
   http-equiv="Content-Security-Policy"
   content="frame-ancestors 'none';" />
   <meta
   http-equiv="X-Frame-Options"
-  content="SAMEORIGIN" />
+  content="SAMEORIGIN" /> */}
     </Head>
     <main className={styles.main}>
       <div className={styles.description}>
