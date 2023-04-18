@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
     <Head>
-    <META HTTP-EQUIV='Content-Security-Policy' CONTENT="frame-ancestors 'none';"/>
+    <meta httpEquiv='Content-Security-Policy' content="frame-ancestors 'none';"/>
     </Head>
     <main className={styles.main}>
       <div className={styles.description}>
