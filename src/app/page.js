@@ -12,6 +12,9 @@ export default function Home() {
     <meta
   http-equiv="Content-Security-Policy"
   content="frame-ancestors 'none';" />
+  <meta
+  http-equiv="X-Frame-Options"
+  content="SAMEORIGIN" />
     </Head>
     <main className={styles.main}>
       <div className={styles.description}>
