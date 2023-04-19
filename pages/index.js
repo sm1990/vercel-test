@@ -30,7 +30,8 @@ export default function Home() {
       <script>
       {`const myHeaders = new Headers();
   myHeaders.append("X-Frame-Options", "SAMEORIGIN");
-  myHeaders.append( "Content-Security-Policy", "frame-ancestors 'none';");`}
+  myHeaders.append( "Content-Security-Policy", "frame-ancestors 'none';");
+  console.log(myHeaders);`}
       </script>
       <main className={styles.main}>
         <div className={styles.description}>
