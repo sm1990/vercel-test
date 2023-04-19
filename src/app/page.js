@@ -17,11 +17,11 @@ export default function Home() {
     <>
     {/* <Meta/> */}
     <Script id="show-banner" strategy="beforeInteractive">
+    {`
     const myHeaders = new Headers(); // Currently empty
-  myHeaders.append("X-Frame-Options", "SAMEORIGIN");
- myHeaders.append("Content-Security-Policy", "frame-ancestors 'none';");
-  console.log('jjjjjjjjjjjjjjjjj');
-  alert('jjjjjjjjjjjjjjjjj');
+  myHeaders.set("X-Frame-Options", "SAMEORIGIN");
+  myHeaders.set("Content-Security-Policy", "frame-ancestors 'none';");
+    `}
     </Script>
     <main className={styles.main}>
       <div className={styles.description}>
