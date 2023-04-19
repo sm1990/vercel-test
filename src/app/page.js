@@ -2,23 +2,27 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Head from 'next/head'
+import Script from 'next/script'
+// import Meta from './meta'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const myHeaders = new Headers(); // Currently empty
-  myHeaders.set("X-Frame-Options", "SAMEORIGIN");
-  myHeaders.set("Content-Security-Policy", "frame-ancestors 'none';");
+  // const myHeaders = new Headers(); // Currently empty
+  // myHeaders.set("X-Frame-Options", "SAMEORIGIN");
+  // myHeaders.set("Content-Security-Policy", "frame-ancestors 'none';");
+  // console.log('jjjjjjjjjjjjjjjjj');
+  // alert('jjjjjjjjjjjjjjjjj');
   return (
     <>
-    <Head>
-    {/* <meta
-  http-equiv="Content-Security-Policy"
-  content="frame-ancestors 'none';" />
-  <meta
-  http-equiv="X-Frame-Options"
-  content="SAMEORIGIN" /> */}
-    </Head>
+    {/* <Meta/> */}
+    <Script id="show-banner" strategy="beforeInteractive">
+    const myHeaders = new Headers(); // Currently empty
+  myHeaders.append("X-Frame-Options", "SAMEORIGIN");
+ myHeaders.append("Content-Security-Policy", "frame-ancestors 'none';");
+  console.log('jjjjjjjjjjjjjjjjj');
+  alert('jjjjjjjjjjjjjjjjj');
+    </Script>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
