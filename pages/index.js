@@ -5,18 +5,18 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export async function getServerSideProps({ req, res }) {
-  res.setHeader(
-    "X-Frame-Options", "SAMEORIGIN"
-  );
-  res.setHeader(
-    "Content-Security-Policy", "frame-ancestors 'none';"
-  )
+// export async function getServerSideProps({ req, res }) {
+//   res.setHeader(
+//     "X-Frame-Options", "SAMEORIGIN"
+//   );
+//   res.setHeader(
+//     "Content-Security-Policy", "frame-ancestors 'none';"
+//   )
 
-  return {
-    props: {},
-  }
-}
+//   return {
+//     props: {},
+//   }
+// }
 
 export default function Home() {
   return (
@@ -27,6 +27,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <script>
+      {`const myHeaders = new Headers();
+  myHeaders.append("X-Frame-Options", "SAMEORIGIN");
+  myHeaders.append( "Content-Security-Policy", "frame-ancestors 'none';");`}
+      </script>
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
